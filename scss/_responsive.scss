@@ -1,0 +1,103 @@
+@include media-md {
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background: transparent;
+      text-align: right;
+
+      &__item {
+        display: inline;
+        padding-right: 1.5rem;
+      }
+
+      &__link {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .about__bio {
+    font-size: 1.5rem;
+  }
+
+  .projects {
+    &__bio-image {
+      height: 100vh;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-secondary {
+      font-size: 3rem;
+      margin: 1rem 0;
+    }
+  }
+
+  .contact__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include media-lg {
+  // in use max vp of my laptop
+  .projects {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+      width: 80vw; //vw is relative to viewport width
+      margin: 1rem auto 0 auto;
+      grid-gap: 1.5rem;
+      height: 80%;
+    }
+
+    &__bio-image {
+      height: 100vh;
+    }
+  }
+
+  .contact__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about__bio-image {
+    height: 100vh;
+  }
+
+  .about__bio-image {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .about__bio {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 32%;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+
+  .bio_title {
+    font-size: 2.8rem;
+    // margin: 1rem 0 1rem 10rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: $secondary-color;
+  }
+}
+
+@include media-xl {
+  .projects__bio-image {
+    height: 50vh;
+  }
+}
